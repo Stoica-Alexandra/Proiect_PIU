@@ -1,2 +1,4 @@
-1;lapte;10;10,25;Alimentar;Reciclabil, Vegan, Brand
-2;oua;30;20,59;Alimentar;Brand
+1;lapte;20;10,59;Alimentar;Nedefinit
+2;miere;20;50,4;Alimentar;Vegan, Handmade
+3;tricou;30;59,99;Vestimentar;NoName
+4;televizor;10;1999,99;Electronic;GarantieExtinsa, Brand

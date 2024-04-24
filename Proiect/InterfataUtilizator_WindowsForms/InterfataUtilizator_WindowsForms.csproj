@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Afisare_Produs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Afisare_Produs.Designer.cs">
+      <DependentUpon>Form_Afisare_Produs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Citire_Produs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Citire_Produs.Designer.cs">
+      <DependentUpon>Form_Citire_Produs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Citire_Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +70,12 @@
     </Compile>
     <Compile Include="Form_Afisare_Client.Designer.cs">
       <DependentUpon>Form_Afisare_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

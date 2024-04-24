@@ -16,7 +16,7 @@ namespace InterfataUtilizator_WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Citire_Client());
+            Application.Run(new Main());
         }
     }
 }

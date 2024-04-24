@@ -34,6 +34,7 @@ namespace InterfataUtilizator_WindowsForms
 
         private Button btnAdd;
         private Button btnRefresh;
+        private Button btnBack;
 
         private const int LATIME_CONTROL = 150;
         private const int DIMENSIUNE_PAS_Y = 30;
@@ -145,6 +146,15 @@ namespace InterfataUtilizator_WindowsForms
             btnRefresh.Click += OnButtonClicked_Refresh; 
             this.Controls.Add(btnRefresh);
 
+            //adaugare control de tip Button pentru Inapoi
+            btnBack = new Button();
+            btnBack.Width = LATIME_CONTROL / 2;
+            btnBack.Location = new System.Drawing.Point(10, 0);
+            btnBack.BackColor = Color.White;
+            btnBack.Text = "Back";
+            btnBack.Click += OnButtonClicked_Back;
+            this.Controls.Add(btnBack);
+
             // adaugare handlere pentru evenimentele FormClosed ale formei
             this.FormClosed += OnFormClosed;
         }
@@ -236,6 +246,11 @@ namespace InterfataUtilizator_WindowsForms
         private void OnFormClosed(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void OnButtonClicked_Back(object sender, EventArgs e)
+        {
+            (new Main()).Show();
+            this.Hide(); // Optionally hide this form
         }
     }
 }
