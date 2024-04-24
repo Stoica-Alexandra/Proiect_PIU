@@ -1,0 +1,2 @@
+1;lapte;10;10,25;Alimentar;Reciclabil, Vegan, Brand
+2;oua;30;20,59;Alimentar;Brand
