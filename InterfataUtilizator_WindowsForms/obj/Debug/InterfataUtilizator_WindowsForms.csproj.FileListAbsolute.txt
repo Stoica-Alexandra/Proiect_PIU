@@ -39,3 +39,5 @@ C:\Users\ASUS\Desktop\Proiect_PIU-main\Proiect\InterfataUtilizator_WindowsForms\
 C:\Users\ASUS\Desktop\Proiect_PIU-main\Proiect\InterfataUtilizator_WindowsForms\obj\Debug\InterfataUtilizator_WindowsForms.Forma_Adauga_Produs.resources
 C:\Users\ASUS\Desktop\Proiect_PIU-main\Proiect\InterfataUtilizator_WindowsForms\obj\Debug\InterfataUtilizator_WindowsForms.Forma_Afisare_Produs.resources
 C:\Users\ASUS\Desktop\Proiect_PIU-main\Proiect\InterfataUtilizator_WindowsForms\obj\Debug\InterfataUtilizator_WindowsForms.Forma_Modifica_Produs.resources
+C:\Users\ASUS\Desktop\Proiect_PIU-main\Proiect\InterfataUtilizator_WindowsForms\obj\Debug\InterfataUtilizator_WindowsForms.Forma_Cauta_Produs.resources
+C:\Users\ASUS\Desktop\Proiect_PIU-main\Proiect\InterfataUtilizator_WindowsForms\obj\Debug\InterfataUtilizator_WindowsForms.Forma_Cumpara.resources

@@ -1,4 +1,5 @@
-﻿using EvidentaStudenti_UI_WindowsForms;
+﻿
+using EvidentaStudenti_UI_WindowsForms;
 using InterfataUtilizator_WindowsForms;
 using LibrarieModele;
 using NivelStocareDateClient;
@@ -41,7 +42,7 @@ namespace InterfataUtilizator_WindowsForms
             if (dgvAfisareClienti.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dgvAfisareClienti.SelectedRows[0].Index;
-                IStocareData_Client adminClienti = StocareFactory.GetAdministratorStocareClient();
+                
                 Client selectedClient = adminClienti.GetClientbyIndex(selectedRowIndex+1);
 
                 if (selectedClient != null)
@@ -58,11 +59,13 @@ namespace InterfataUtilizator_WindowsForms
         public void Afisare_Clienti(List<Client> clienti)
         {
             dgvAfisareClienti.DataSource = null;
-            dgvAfisareClienti.DataSource = clienti.Select(s => new { s.IdClient, s.Nume, s.Prenume, s.CNP, s.NrTelefon, s.Buget, s.NrProduse, s.ProduseId}).ToList();
+            dgvAfisareClienti.DataSource = clienti.Select(s => new { s.IdClient, s.Nume, s.Prenume, s.CNP, s.NrTelefon, Buget = Math.Round(s.Buget, 2), s.NrProduse, s.ConversieLaSir_ProduseID}).ToList();
         }
         private void btnCauta_Click(object sender, EventArgs e)
         {
-            (new Forma_Cauta_Client()).Show();
+            Forma_Cauta_Client forma = new Forma_Cauta_Client();
+            forma.FormClosed += (send, evnt) => this.Show();
+            forma.Show();
             this.Hide();
         }
 
@@ -71,7 +74,7 @@ namespace InterfataUtilizator_WindowsForms
             if (dgvAfisareClienti.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dgvAfisareClienti.SelectedRows[0].Index;
-                IStocareData_Client adminClienti = StocareFactory.GetAdministratorStocareClient();
+                
                 Client selectedClient = adminClienti.GetClientbyIndex(selectedRowIndex + 1);
 
                 if (selectedClient != null)
@@ -89,16 +92,27 @@ namespace InterfataUtilizator_WindowsForms
             Afisare_Clienti(clienti);
         }
 
-        private void btnCumpara_Click(object sender, EventArgs e)//
+        private void btnCumpara_Click(object sender, EventArgs e)
         {
-            (new Forma_Main()).Show();
-            this.Hide();
+            if (dgvAfisareClienti.SelectedRows.Count > 0)
+            {
+                Client client = adminClienti.GetClientbyIndex(Convert.ToInt32(dgvAfisareClienti.SelectedRows[0].Index)+1);
+
+                if (client.NrMaxProduse() == true)
+                    MessageBox.Show("Clientul a ajuns la numărul maxim de produse cumpărate!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    Forma_Cumpara forma = new Forma_Cumpara(Convert.ToInt32(dgvAfisareClienti.SelectedRows[0].Index)+1);
+                    forma.Show();
+                }
+            }
+            else
+                MessageBox.Show("Nu s-a selectat corect rândul", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);  
         }
 
         private void btnInapoi_Click(object sender, EventArgs e)
         {
-            (new Forma_Main()).Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

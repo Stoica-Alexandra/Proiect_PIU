@@ -37,7 +37,9 @@ namespace InterfataUtilizator_WindowsForms
         }
         private void btnCauta_Click(object sender, EventArgs e)
         {
-            (new Forma_Cauta_Client()).Show();//
+            Forma_Cauta_Produs forma=new Forma_Cauta_Produs();
+            forma.FormClosed += (send, evnt) => this.Show();
+            forma.Show();
             this.Hide();
         }
 
@@ -46,7 +48,7 @@ namespace InterfataUtilizator_WindowsForms
             if (dgvAfisareProduse.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dgvAfisareProduse.SelectedRows[0].Index;
-                IStocareData_Produs adminProduse = StocareFactory.GetAdministratorStocareProdus();
+                adminProduse = StocareFactory.GetAdministratorStocareProdus();
                 Produs selectedProdus = adminProduse.GetProdustbyIndex(selectedRowIndex + 1);
 
                 if (selectedProdus != null)
@@ -60,20 +62,12 @@ namespace InterfataUtilizator_WindowsForms
         {
             List<Produs> produse = adminProduse.GetProduse();
             Produs.NextId = produse.Count;
-
+            
             Afisare_Produse(produse);
         }
-
-        private void btnCumpara_Click(object sender, EventArgs e)//
-        {
-            (new Forma_Main()).Show();
-            this.Hide();
-        }
-
         private void btnInapoi_Click(object sender, EventArgs e)
         {
-            (new Forma_Main()).Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnAdauga_Produs_Click(object sender, EventArgs e)
@@ -86,7 +80,7 @@ namespace InterfataUtilizator_WindowsForms
             if (dgvAfisareProduse.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dgvAfisareProduse.SelectedRows[0].Index;
-                IStocareData_Produs adminProduse = StocareFactory.GetAdministratorStocareProdus();
+                adminProduse = StocareFactory.GetAdministratorStocareProdus();
                 Produs selectedProdus = adminProduse.GetProdustbyIndex(selectedRowIndex + 1);
 
                 if (selectedProdus != null)

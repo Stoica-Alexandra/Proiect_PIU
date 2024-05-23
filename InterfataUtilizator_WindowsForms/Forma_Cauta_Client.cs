@@ -79,8 +79,7 @@ namespace InterfataUtilizator_WindowsForms
 
         private void btnInapoi_Click(object sender, EventArgs e)
         {
-            (new Forma_Afisare_Client()).Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnCautareNume_Click(object sender, EventArgs e)
@@ -99,5 +98,6 @@ namespace InterfataUtilizator_WindowsForms
             else
                 MessageBox.Show("Introduceți numele!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
     }
 }

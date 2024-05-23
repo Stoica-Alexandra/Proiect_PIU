@@ -38,7 +38,6 @@
             this.btnCauta = new System.Windows.Forms.Button();
             this.btnActualizare = new System.Windows.Forms.Button();
             this.btnSterge = new System.Windows.Forms.Button();
-            this.btnCumpara = new System.Windows.Forms.Button();
             this.btnInapoi = new System.Windows.Forms.Button();
             this.dgvAfisareProduse = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAfisareProduse)).BeginInit();
@@ -85,7 +84,7 @@
             this.btnCauta.BackColor = System.Drawing.Color.Purple;
             this.btnCauta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnCauta.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCauta.Location = new System.Drawing.Point(45, 375);
+            this.btnCauta.Location = new System.Drawing.Point(45, 300);
             this.btnCauta.Name = "btnCauta";
             this.btnCauta.Size = new System.Drawing.Size(200, 54);
             this.btnCauta.TabIndex = 3;
@@ -111,26 +110,13 @@
             this.btnSterge.BackColor = System.Drawing.Color.Purple;
             this.btnSterge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSterge.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSterge.Location = new System.Drawing.Point(45, 450);
+            this.btnSterge.Location = new System.Drawing.Point(45, 375);
             this.btnSterge.Name = "btnSterge";
             this.btnSterge.Size = new System.Drawing.Size(200, 54);
             this.btnSterge.TabIndex = 5;
             this.btnSterge.Text = "Șterge produs";
             this.btnSterge.UseVisualStyleBackColor = false;
             this.btnSterge.Click += new System.EventHandler(this.btnSterge_Click);
-            // 
-            // btnCumpara
-            // 
-            this.btnCumpara.BackColor = System.Drawing.Color.Purple;
-            this.btnCumpara.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnCumpara.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCumpara.Location = new System.Drawing.Point(45, 300);
-            this.btnCumpara.Name = "btnCumpara";
-            this.btnCumpara.Size = new System.Drawing.Size(200, 54);
-            this.btnCumpara.TabIndex = 6;
-            this.btnCumpara.Text = "Cumpără produs";
-            this.btnCumpara.UseVisualStyleBackColor = false;
-            this.btnCumpara.Click += new System.EventHandler(this.btnCumpara_Click);
             // 
             // btnInapoi
             // 
@@ -152,6 +138,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvAfisareProduse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAfisareProduse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvAfisareProduse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAfisareProduse.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -193,7 +181,6 @@
             this.ClientSize = new System.Drawing.Size(1382, 553);
             this.Controls.Add(this.dgvAfisareProduse);
             this.Controls.Add(this.btnInapoi);
-            this.Controls.Add(this.btnCumpara);
             this.Controls.Add(this.btnSterge);
             this.Controls.Add(this.btnActualizare);
             this.Controls.Add(this.btnCauta);
@@ -218,7 +205,6 @@
         private System.Windows.Forms.Button btnCauta;
         private System.Windows.Forms.Button btnActualizare;
         private System.Windows.Forms.Button btnSterge;
-        private System.Windows.Forms.Button btnCumpara;
         private System.Windows.Forms.Button btnInapoi;
         private System.Windows.Forms.DataGridView dgvAfisareProduse;
     }

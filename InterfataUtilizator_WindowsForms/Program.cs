@@ -16,7 +16,8 @@ namespace InterfataUtilizator_WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forma_Main());
+            Forma_Main forma= new Forma_Main();
+            Application.Run(forma);
         }
     }
 }

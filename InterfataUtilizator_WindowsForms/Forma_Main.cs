@@ -19,13 +19,17 @@ namespace InterfataUtilizator_WindowsForms
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            (new Forma_Afisare_Client()).Show();
+            Forma_Afisare_Client forma=new Forma_Afisare_Client();
+            forma.FormClosed += (send, evnt) => this.Show();
+            forma.Show();
             this.Hide();
         }
 
         private void btnProdus_Click(object sender, EventArgs e)
         {
-            (new Forma_Afisare_Produs()).Show();
+            Forma_Afisare_Produs forma = new Forma_Afisare_Produs();
+            forma.FormClosed += (send, evnt) => this.Show();
+            forma.Show();
             this.Hide();
         }
     }

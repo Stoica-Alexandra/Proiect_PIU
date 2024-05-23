@@ -56,8 +56,8 @@ namespace InterfataUtilizator_WindowsForms
             txtNume.Text = produs.Nume;
             txtCantitate.Text = produs.Cantitate.ToString();
             txtPret.Text = produs.Pret.ToString();
-            if(cbxTip.SelectedIndex!=-1)
-                cbxTip.SelectedItem = (TipProdus)Enum.Parse(typeof(TipProdus), cbxTip.SelectedItem.ToString());
+
+            cbxTip.Text = produs.Tip_Produs.ToString();
 
             ckbBrand.Checked = produs.Optiuni_Produs.Contains(ckbBrand.Text);
             ckbDisponibilFizic.Checked = produs.Optiuni_Produs.Contains(ckbDisponibilFizic.Text);
